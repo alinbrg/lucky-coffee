@@ -1,0 +1,107 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth !important;
+	transition: all 0.3s ease;
+	font-size: 1.6rem;
+}
+
+:root {
+	--primary: #e3f1dd;
+	--white: #ffffff;
+	--black: #000000;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--primary);
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth !important;
+}
+
+body {
+	font-family: sans-serif;
+	color: var(--black);
+}
+
+a {
+	text-decoration: none;
+	color: var(--black);
+}
+
+a.link:hover {
+	/* color: #6e6e6e; */
+	color: rgba(0, 0, 0, 0.6);
+}
+
+ul {
+	list-style-type: none;
+}
+button {
+	font-family: sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	cursor: pointer;
+	border: none;
+}
+
+p {
+	font-feature-settings: normal;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+h1 {
+	font-style: normal;
+	font-weight: 400;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-style: normal;
+	font-weight: 400;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+.button {
+	padding: 1rem 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--white);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 3rem;
+}
+.button:hover {
+	background: rgba(227, 241, 221, 0.3);
+	border: 1px solid rgba(0, 0, 0, 0.15);
+}
+.button-icon {
+	gap: 1rem;
+}
