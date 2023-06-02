@@ -1,3 +1,19 @@
+@font-face {
+	font-family: "Meta Serif Pro";
+	src: url("../font/MetaSerifPro-Book.ttf");
+	font-weight: 450;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Inter";
+	src: url("../font/Inter-Regular.ttf");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
 * {
 	margin: 0;
 	padding: 0;
