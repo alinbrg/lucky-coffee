@@ -43,6 +43,7 @@
 
 ::-webkit-scrollbar-thumb:hover {
 	/* background: var(--primary); */
+	background: #8ea882;
 }
 
 html {
@@ -437,7 +438,8 @@ header {
 	position: relative;
 }
 .section-top,
-.about-text {
+.about-text,
+.contact-section-wrapper {
 	padding-left: 15rem;
 }
 
@@ -470,14 +472,16 @@ header {
 }
 @media (max-width: 1600px) {
 	.section-top,
-	.about-text {
+	.about-text,
+	.contact-section-wrapper {
 		padding-left: 10rem;
 	}
 }
 
 @media (max-width: 1440px) {
 	.section-top,
-	.about-text {
+	.about-text,
+	.contact-section-wrapper {
 		padding-left: 8rem;
 	}
 }
@@ -490,7 +494,8 @@ header {
 		grid-template-columns: 1fr;
 	}
 	.section-top,
-	.about-text {
+	.about-text,
+	.contact-section-wrapper {
 		padding-left: 0;
 	}
 	.section-top {
@@ -528,6 +533,8 @@ header {
 }
 
 .products-text {
+	padding-top: 0;
+	padding-bottom: 0;
 	background-color: unset;
 }
 .products-text::after {
@@ -566,6 +573,9 @@ header {
 }
 
 @media (max-width: 1024px) {
+	.main-products {
+		margin-bottom: 4.8rem;
+	}
 	.products-section-wrapper {
 		flex-wrap: wrap;
 	}
@@ -587,5 +597,82 @@ header {
 	.product-images img {
 		/* aspect-ratio: unset; */
 		max-height: 168px;
+	}
+}
+
+/* main page contact section */
+.main-contact {
+	margin-bottom: 16rem;
+}
+.contact-section-wrapper {
+	margin-top: 8rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.main-contact .contact-card a {
+	font-style: normal;
+	font-weight: 450;
+	font-size: 18px;
+	line-height: 23px;
+	margin-bottom: 1.6rem;
+	display: block;
+	color: #000000;
+}
+.main-contact .contact-card li:last-child a {
+	margin-bottom: 0;
+}
+.main-contact .socials a {
+	font-style: italic;
+}
+
+.main-contact .contact-card {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+	padding-left: 6.4rem;
+	position: relative;
+}
+.main-contact .contact-card::before {
+	content: "";
+	position: absolute;
+	width: 1px;
+	height: 100%;
+	display: block;
+	background: #d9d9d9;
+	top: 0;
+	left: 0;
+}
+@media (max-width: 1440px) {
+	.main-contact .contact-card {
+		padding-left: 4.4rem;
+	}
+}
+@media (max-width: 1024px) {
+	.main-contact {
+		margin-bottom: 4.8rem;
+	}
+	.main-contact .contact-card {
+		padding: 0;
+		padding-top: 2.4rem;
+		padding-bottom: 2.4rem;
+	}
+	.main-contact .contact-card::before {
+		width: 100%;
+		height: 1px;
+	}
+	.main-contact .contact-card:first-child {
+		padding-top: 0;
+	}
+	.main-contact .contact-card:first-child::before {
+		display: none;
+	}
+	.contact-section-wrapper {
+		grid-template-columns: 1fr;
+		margin-top: 0;
+	}
+	.main-contact .contact-card a {
+		font-size: 16px;
+		line-height: 21px;
+		margin-bottom: 1.2rem;
 	}
 }
