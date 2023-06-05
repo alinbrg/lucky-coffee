@@ -54,6 +54,8 @@ body {
 	font-family: "Meta Serif Pro", sans-serif;
 	color: var(--black);
 	font-weight: 450;
+	max-width: 1920px;
+	margin: auto;
 }
 
 a {
@@ -217,6 +219,33 @@ header {
 /* main page */
 .main-page-slider {
 	margin-bottom: 10rem;
+	position: relative;
+}
+
+.main-page-slider::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: var(--primary);
+	border-radius: 30rem;
+	display: block;
+	top: 0;
+	left: 0;
+}
+.main-page-slider::after {
+	content: "";
+	width: 12.8rem;
+	height: 16.6rem;
+	background-image: url("../img/Coffee\ Leaf\ NoBg\ 1.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 1;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: block;
 }
 .main-page-slider .swiper-slide img {
 	display: block;
@@ -333,5 +362,28 @@ header {
 	}
 	.main-page-slider .swiper-slide {
 		height: 664px;
+	}
+	.main-page-slider::after,
+	.main-page-slider::before {
+		width: 3.89rem;
+		height: 2.66rem;
+		background: none;
+		background-image: url("../img/bean.svg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		left: 0;
+		right: unset;
+		top: unset;
+		bottom: unset;
+		z-index: 3;
+	}
+	.main-page-slider::after {
+		bottom: -1rem;
+	}
+	.main-page-slider::before {
+		bottom: 4rem;
+		rotate: 45deg;
+		left: -0.5rem;
 	}
 }
