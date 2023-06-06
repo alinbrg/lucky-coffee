@@ -608,8 +608,21 @@ header {
 	margin-top: 8rem;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
+	position: relative;
 }
-
+.contact-section-wrapper::after {
+	content: "";
+	width: 14rem;
+	height: 14rem;
+	display: block;
+	position: absolute;
+	right: 5%;
+	top: 0;
+	background-image: url("../img/large-cup.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
 .main-contact .contact-card a {
 	font-style: normal;
 	font-weight: 450;
@@ -669,6 +682,9 @@ header {
 	.contact-section-wrapper {
 		grid-template-columns: 1fr;
 		margin-top: 0;
+	}
+	.contact-section-wrapper::after {
+		display: none;
 	}
 	.main-contact .contact-card a {
 		font-size: 16px;
