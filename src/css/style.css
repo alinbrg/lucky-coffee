@@ -73,9 +73,8 @@ a:hover {
 
 button {
 	font-family: "Meta Serif Pro";
-	font-family: sans-serif;
 	font-style: normal;
-	font-weight: 400;
+	font-weight: 450;
 	cursor: pointer;
 	border: none;
 }
@@ -870,6 +869,222 @@ footer .container {
 	}
 	.contact-page-wrapper {
 		margin-bottom: 10rem;
+	}
+}
+
+/* product page */
+
+.product-page .section-bg {
+	margin-bottom: 3.2rem;
+}
+.product-page-desc {
+	max-width: 36rem;
+	text-align: center;
+	margin: auto;
+	margin-bottom: 3.2rem;
+}
+
+.product-page-desc h3 {
+	font-size: 32px;
+	line-height: 41px;
+	margin-bottom: 2.4rem;
+	color: var(--black);
+}
+.product-page-desc p {
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 140%;
+	color: var(--black);
+	margin-bottom: 1.6rem;
+}
+
+.product-table {
+	border-radius: 1.2rem;
+	width: 100%;
+	margin-bottom: 7.2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+
+.product-table .thead {
+	width: 100%;
+}
+.product-table .tbody {
+	width: 100%;
+}
+.product-table .tr {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	text-align: left;
+}
+
+.product-table .th,
+.product-table .td {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	padding: 2.4rem;
+	border-collapse: collapse;
+}
+
+.table-col-title {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 23px;
+	color: var(--black);
+	margin-bottom: 2px;
+}
+.table-col-sub-title {
+	font-style: italic;
+	font-weight: 450;
+	font-size: 15px;
+	line-height: 19px;
+	color: var(--black);
+	opacity: 0.6;
+}
+
+.product-table .td,
+.product-table .th {
+	border: 1px solid #e7e7e7;
+}
+.product-table .th {
+	border-top: none;
+	background-color: var(--primary);
+}
+
+.product-table .thead .th:first-child {
+	border-left: unset;
+	border-top-left-radius: 12px;
+}
+.product-table .thead .th:last-child {
+	border-right: none;
+	border-top-right-radius: 12px;
+}
+.product-table .td .main {
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 140%;
+	color: var(--black);
+	margin-bottom: 2px;
+}
+.product-table .td .sub {
+	font-family: "Inter";
+	font-style: italic;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 140%;
+	color: var(--black);
+	opacity: 0.6;
+}
+.product-table .tbody td {
+	background: #f9f9f9;
+}
+
+.product-table .tbody .tr:last-child .td:first-child {
+	border-bottom-left-radius: 12px;
+}
+.product-table .tbody .tr:last-child .td:last-child {
+	border-bottom-right-radius: 12px;
+}
+
+.price-list {
+	background: #fff9f0;
+	border-radius: 16px;
+	padding: 64px;
+	margin-bottom: 15rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.price-list .title {
+	font-style: normal;
+	font-weight: 450;
+	font-size: 32px;
+	line-height: 41px;
+	color: var(--black);
+	margin-bottom: 8px;
+}
+.price-list p {
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 140%;
+	text-align: center;
+	color: var(--black);
+	margin-bottom: 3.2rem;
+	opacity: 0.6;
+}
+.price-list .button {
+	background-color: var(--primary);
+}
+.swipe {
+	display: none;
+	width: 100%;
+	align-items: center;
+	justify-content: end;
+}
+.products-wrapper .title {
+	text-align: center;
+	font-size: 24px;
+	color: var(--black);
+	line-height: 31px;
+	margin-bottom: 24px;
+}
+@media (max-width: 1024px) {
+	.product-page-desc h3 {
+		font-size: 24px;
+		line-height: 31px;
+	}
+	.products-wrapper .title {
+		font-size: 20px;
+		line-height: 26px;
+		margin-bottom: 5px;
+	}
+	.product-page-desc p {
+		font-size: 14px;
+		line-height: 140%;
+	}
+}
+
+@media (max-width: 768px) {
+	.swipe {
+		display: flex;
+		margin-bottom: 1.7rem;
+		gap: 1rem;
+	}
+	.product-page-desc {
+		max-width: unset;
+		width: 100%;
+	}
+	.table-container {
+		padding: 0;
+	}
+	.product-table {
+		overflow-x: scroll;
+		margin-bottom: 4rem;
+		padding: 0 1.6rem;
+	}
+	.product-table::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+	}
+	.product-table .tr {
+		grid-template-columns: repeat(4, 171px);
+	}
+	.price-list {
+		padding: 2.4rem;
+		margin-bottom: 13rem;
+	}
+	.price-list .title {
+		font-size: 24px;
+		line-height: 31px;
 	}
 }
 
