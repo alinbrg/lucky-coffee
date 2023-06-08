@@ -700,9 +700,6 @@ footer {
 	line-height: 21px;
 }
 
-footer .container {
-	/* overflow-x: hidden; */
-}
 .footer-wrapper {
 	background-color: var(--primary);
 	border-radius: 16px;
