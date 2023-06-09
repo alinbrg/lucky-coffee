@@ -680,7 +680,6 @@ header {
 }
 footer {
 	margin-bottom: 72px;
-	/* overflow-x: hidden; */
 }
 .smartweb .text-line {
 	font-style: normal;
@@ -808,6 +807,8 @@ footer {
 	font-size: 4.8rem;
 	line-height: 6.2rem;
 	color: var(--white);
+	text-align: center;
+	width: 100%;
 }
 
 .contact-page-wrapper {
@@ -1085,6 +1086,109 @@ footer {
 	}
 }
 
+/* about us */
+.about-page {
+	/* overflow-x: hidden; */
+	position: relative;
+}
+.about-page::after {
+	content: "";
+	width: 13rem;
+	height: 17rem;
+	background-image: url("../img/Coffee\ Leaf\ NoBg\ 1.svg");
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 477px;
+}
+.about-page-wrapper {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem;
+	margin-bottom: 18rem;
+}
+.about-us-text {
+	background: #e9f4e4;
+	border-radius: 16px;
+	padding: 4.8rem;
+}
+.about-us-text > * {
+	max-width: 544px;
+	width: 100%;
+	margin: auto;
+}
+
+.about-us-text .title {
+	font-size: 48px;
+	line-height: 62px;
+	color: var(--black);
+	margin-bottom: 4rem;
+}
+.about-us-text .about-card-title {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 31px;
+	color: var(--black);
+	margin-bottom: 2.4rem;
+}
+.about-us-text p {
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 140%;
+	color: var(--black);
+	margin-bottom: 2.4rem;
+}
+.about-us-text strong {
+	font-weight: 600;
+	font-family: "Meta Serif Pro";
+	font-style: normal;
+	font-size: 20px;
+	line-height: 140%;
+	color: var(--black);
+}
+.about-us-img {
+	position: relative;
+}
+
+.about-us-img .about-us-main-img {
+	width: 100%;
+	max-height: 859px;
+	aspect-ratio: 1/0.9;
+	object-fit: cover;
+	position: sticky;
+	top: 0;
+	border-radius: 16px;
+}
+.about-card {
+	margin-bottom: 4rem;
+}
+
+@media (max-width: 1024px) {
+	.about-page-wrapper {
+		display: flex;
+		flex-direction: column-reverse;
+		margin-bottom: 11rem;
+	}
+	.about-us-img .about-us-main-img {
+		position: static;
+		max-height: 331px;
+	}
+
+	.about-us-text {
+		padding: 3rem 2.4rem;
+	}
+	.about-page::after {
+		top: 210px;
+		right: 0;
+		width: 6rem;
+		height: 8rem;
+	}
+}
 /* padding-left styles */
 .section-top,
 .about-text,
