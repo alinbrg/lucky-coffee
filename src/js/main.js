@@ -54,4 +54,27 @@ function mainPageSlider() {
 	}
 }
 
+function downloadPriceList() {
+	if (document.querySelector(".open-price-download")) {
+		const openPriceDownload = document.querySelector(".open-price-download");
+		const modal = document.querySelector(".download-form");
+		const closeModalBtn = document.querySelector(".close-modal");
+
+		openPriceDownload.addEventListener("click", (e) => {
+			modal.classList.add("active");
+		});
+
+		closeModalBtn.addEventListener("click", (e) => {
+			modal.classList.remove("active");
+		});
+
+		modal.addEventListener("click", (e) => {
+			if (e.target.classList.contains("download-form")) {
+				modal.classList.remove("active");
+			}
+		});
+	}
+}
+
 mainPageSlider();
+downloadPriceList();

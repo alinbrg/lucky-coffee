@@ -458,7 +458,6 @@ header {
 	width: 126.84px;
 	height: 164.48px;
 	filter: blur(1px);
-	/* transform: rotate(68.77deg); */
 	background-image: url("../img/Coffee\ Leaf\ NoBg\ 2.svg");
 	background-position: center;
 	background-repeat: no-repeat;
@@ -1035,6 +1034,92 @@ footer {
 	line-height: 31px;
 	margin-bottom: 24px;
 }
+
+.download-form.modal {
+	height: 0;
+	position: fixed;
+	bottom: -100%;
+	left: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.2s ease;
+	z-index: -5;
+}
+.download-form.modal.active {
+	transform: scale(1);
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.3);
+	z-index: 4;
+}
+.modal-content {
+	background: #ffffff;
+	box-shadow: 0px 4px 14px rgba(156, 156, 156, 0.15);
+	border-radius: 12px;
+	max-width: 435px;
+}
+.form-top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1.8rem 2.4rem;
+	border-bottom: 1px solid #f0f0f0;
+}
+.form-top h4 {
+	font-size: 24px;
+	line-height: 31px;
+	color: var(--black);
+}
+.form {
+	padding: 1.6rem 2.4rem 2.4rem;
+}
+.form .form-desc {
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 140%;
+	color: var(--black);
+	margin-bottom: 2.4rem;
+}
+.form-row {
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+	margin-bottom: 1.6rem;
+}
+
+.form-row label {
+	font-family: "Meta Serif Pro";
+	font-style: normal;
+	line-height: 20px;
+	color: var(--black);
+}
+.form-row input,
+.form-row input:focus,
+.form-row textarea {
+	border: 1px solid #c4d9bb;
+	border-radius: 8px;
+	padding: 1rem;
+	outline: none;
+}
+.form-row textarea {
+	resize: none;
+	height: 10rem;
+}
+
+.close-modal {
+	cursor: pointer;
+}
+.form button {
+	width: 100%;
+	margin-top: 4rem;
+	background: var(--primary);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
 @media (max-width: 1024px) {
 	.product-page-desc h3 {
 		font-size: 24px;
@@ -1048,6 +1133,18 @@ footer {
 	.product-page-desc p {
 		font-size: 14px;
 		line-height: 140%;
+	}
+	.download-form.modal {
+		align-items: end;
+	}
+	.form-top {
+		padding-top: 4rem;
+	}
+	.form-top h4 {
+		line-height: 20px;
+	}
+	.modal-content {
+		padding-bottom: 10rem;
 	}
 }
 

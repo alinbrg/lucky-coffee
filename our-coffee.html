@@ -202,7 +202,46 @@
 				<div class="price-list">
 					<h3 class="title">Price list</h3>
 					<p>Click the button and download price list PDF file</p>
-					<button class="button">Download Price list</button>
+					<button class="button open-price-download">
+						Download Price list
+					</button>
+				</div>
+			</div>
+
+			<div class="download-form modal">
+				<div class="modal-content">
+					<div class="form-top">
+						<h4>Price list</h4>
+						<img src="src/img/x.svg" alt="" class="close-modal" />
+					</div>
+					<form action="#" class="form">
+						<p class="form-desc">
+							his lesson may seem like something so simple and silly but I’ll be
+							honest with you—it’s close to my heart.
+						</p>
+						<div class="form-row">
+							<label for="name">Full name</label>
+							<input type="text" id="name" name="name" />
+						</div>
+						<div class="form-row">
+							<label for="phone">Phone number</label>
+							<input type="tel" id="phone" name="phone" />
+						</div>
+						<div class="form-row">
+							<label for="email">Email</label>
+							<input type="email" id="email" name="email" />
+						</div>
+						<div class="form-row">
+							<label for="comment">Comment</label>
+							<textarea
+								name="comment"
+								id="comment"
+								cols="30"
+								rows="10"
+							></textarea>
+						</div>
+						<button class="button" type="submit">Download Price list</button>
+					</form>
 				</div>
 			</div>
 		</section>
@@ -255,5 +294,7 @@
 				</div>
 			</div>
 		</footer>
+
+		<script src="src/js/main.js"></script>
 	</body>
 </html>
