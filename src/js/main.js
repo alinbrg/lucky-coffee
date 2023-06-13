@@ -76,5 +76,14 @@ function downloadPriceList() {
 	}
 }
 
+function burgerMenu() {
+	const burger = document.querySelector(".burger");
+	const header = document.querySelector("header");
+	burger.addEventListener("click", (e) => {
+		header.classList.toggle("active");
+	});
+}
+
 mainPageSlider();
 downloadPriceList();
+burgerMenu();

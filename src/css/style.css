@@ -206,14 +206,130 @@ header {
 	align-items: center;
 	justify-content: right;
 }
+.burger,
+.burger-logo {
+	display: none;
+}
+.burger {
+	flex-direction: column;
+	justify-content: center;
+	align-items: end;
+	gap: 7px;
+	cursor: pointer;
+}
+.burger span {
+	background: var(--black);
+	border: 1.5px solid var(--black);
+	width: 19.25px;
+	display: block;
+	height: 1px;
+	border-radius: 2px;
+	flex-shrink: 0;
+}
+.burger span:last-child {
+	margin-bottom: 0;
+}
+.burger-logo img {
+	width: 2.4rem;
+}
 
+header.active .burger span:nth-child(2) {
+	transform: scale(0);
+}
+header.active .burger span:nth-child(1) {
+	transform: rotate(45deg) translate(10px, 7px);
+}
+header.active .burger span:nth-child(3) {
+	transform: rotate(-45deg) translate(6px, -4px);
+}
+header.active {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background-color: var(--white);
+	z-index: 5;
+	top: 0;
+	left: 0;
+}
+
+header.active nav,
+header.active .social-lang-bar {
+	position: absolute;
+	left: 0;
+	display: block;
+}
+header.active nav {
+	top: 15rem;
+	width: 100%;
+}
+header.active nav ul {
+	flex-direction: column;
+}
+header.active .social-lang-bar {
+	bottom: 5.6rem;
+	display: flex;
+	flex-direction: column-reverse;
+	width: 100%;
+	gap: 4.8rem;
+}
+.lang {
+	display: flex;
+	align-items: center;
+	margin-left: 4.8rem;
+	gap: 0.6rem;
+}
+.lang-items a {
+	display: none;
+	font-weight: 450;
+	font-size: 16px;
+	line-height: 21px;
+	color: var(--black);
+}
+.lang-items a.active {
+	display: block;
+}
 @media (max-width: 1024px) {
 	.header-wrapper {
-		grid-template-columns: 1fr;
+		grid-template-columns: 5.6rem auto 5.6rem;
+	}
+	section:first-of-type {
+		margin-top: 127px;
+	}
+	header {
+		position: fixed;
+		width: 100%;
+		height: auto;
+		background-color: var(--white);
+		z-index: 5;
+		top: 0;
+		left: 0;
+		padding-bottom: 2.4rem;
+	}
+
+	.lang {
+		margin-left: 0;
+	}
+	.logo {
+		margin: auto;
+	}
+	.burger,
+	.burger-logo {
+		display: block;
+	}
+	.burger-logo {
+		padding: 1.2rem 1.6rem;
+	}
+	.burger {
+		display: flex;
 	}
 	nav,
 	.social-lang-bar {
 		display: none;
+	}
+
+	header.active .burger-logo {
+		visibility: hidden;
+		opacity: 0;
 	}
 }
 
